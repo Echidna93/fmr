@@ -16,6 +16,34 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
+-- Table structure for table `flint_hills`
+--
+
+DROP TABLE IF EXISTS `flint_hills`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `flint_hills` (
+  `bird_id` int(11) DEFAULT NULL,
+  `num_birds` int(11) DEFAULT NULL,
+  `point_num` int(11) DEFAULT NULL,
+  `survey_date` date DEFAULT NULL,
+  `distance_time_of_call` varchar(1080) DEFAULT NULL,
+  KEY `bird_id` (`bird_id`),
+  CONSTRAINT `flint_hills_ibfk_1` FOREIGN KEY (`bird_id`) REFERENCES `mn_birds` (`bird_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `flint_hills`
+--
+
+LOCK TABLES `flint_hills` WRITE;
+/*!40000 ALTER TABLE `flint_hills` DISABLE KEYS */;
+INSERT INTO `flint_hills` VALUES (6,1,8,'2009-06-11','5 min, within 50m'),(7,2,1,'2009-06-11','5 min, within 50m'),(7,2,2,'2009-06-11','5 min, within 50m'),(7,2,4,'2009-06-11','5 min, within 50m'),(7,3,5,'2009-06-11','5 min, within 50m'),(7,2,7,'2009-06-11','5 min, within 50m'),(10,1,1,'2009-06-11','5 min, within 50m'),(10,1,4,'2009-06-11','5 min, within 50m'),(10,1,5,'2009-06-11','5 min, within 50m'),(18,1,10,'2009-06-11','5 min, within 50m'),(18,1,11,'2009-06-11','5 min, within 50m'),(31,1,8,'2009-06-11','5 min, within 50m'),(37,1,11,'2009-06-11','5 min, within 50m'),(38,1,11,'2009-06-11','5 min, within 50m'),(49,2,1,'2009-06-11','5 min, within 50m'),(49,2,3,'2009-06-11','5 min, within 50m'),(49,2,5,'2009-06-11','5 min, within 50m'),(49,2,6,'2009-06-11','5 min, within 50m'),(49,1,8,'2009-06-11','5 min, within 50m'),(49,2,9,'2009-06-11','5 min, within 50m'),(57,1,10,'2009-06-11','5 min, within 50m'),(62,2,1,'2009-06-11','5 min, within 50m'),(62,2,4,'2009-06-11','5 min, within 50m'),(62,1,5,'2009-06-11','5 min, within 50m'),(62,1,8,'2009-06-11','5 min, within 50m'),(64,1,1,'2009-06-11','5 min, within 50m'),(64,1,8,'2009-06-11','5 min, within 50m'),(83,4,11,'2009-06-11','5 min, within 50m'),(88,1,9,'2009-06-11','5 min, within 50m'),(90,1,10,'2009-06-11','5 min, within 50m'),(90,1,11,'2009-06-11','5 min, within 50m'),(93,1,2,'2009-06-11','5 min, within 50m'),(93,1,8,'2009-06-11','5 min, within 50m'),(93,1,10,'2009-06-11','5 min, within 50m'),(93,1,11,'2009-06-11','5 min, within 50m'),(100,1,3,'2009-06-11','5 min, within 50m'),(100,1,5,'2009-06-11','5 min, within 50m'),(100,1,8,'2009-06-11','5 min, within 50m'),(107,1,4,'2009-06-11','5 min, within 50m'),(107,1,7,'2009-06-11','5 min, within 50m'),(120,1,10,'2009-06-11','5 min, within 50m'),(122,2,1,'2009-06-11','5 min, within 50m'),(122,1,2,'2009-06-11','5 min, within 50m'),(122,2,3,'2009-06-11','5 min, within 50m'),(122,1,4,'2009-06-11','5 min, within 50m'),(122,1,8,'2009-06-11','5 min, within 50m'),(122,2,9,'2009-06-11','5 min, within 50m'),(122,1,10,'2009-06-11','5 min, within 50m'),(122,1,11,'2009-06-11','5 min, within 50m'),(123,1,4,'2009-06-11','5 min, within 50m'),(123,1,7,'2009-06-11','5 min, within 50m'),(123,1,10,'2009-06-11','5 min, within 50m'),(123,1,11,'2009-06-11','5 min, within 50m'),(146,1,1,'2009-06-11','5 min, within 50m'),(146,1,4,'2009-06-11','5 min, within 50m'),(146,2,5,'2009-06-11','5 min, within 50m'),(146,1,7,'2009-06-11','5 min, within 50m'),(154,1,7,'2009-06-11','5 min, within 50m'),(163,1,3,'2009-06-11','5 min, within 50m'),(178,1,3,'2009-06-11','5 min, within 50m'),(183,1,7,'2009-06-11','5 min, within 50m'),(189,1,4,'2009-06-11','5 min, within 50m'),(206,1,1,'2009-06-11','5 min, within 50m'),(206,1,2,'2009-06-11','5 min, within 50m'),(206,1,5,'2009-06-11','5 min, within 50m'),(206,1,7,'2009-06-11','5 min, within 50m'),(206,3,8,'2009-06-11','5 min, within 50m'),(206,1,10,'2009-06-11','5 min, within 50m'),(223,1,1,'2009-06-11','5 min, within 50m'),(239,1,1,'2009-06-11','5 min, within 50m'),(239,1,5,'2009-06-11','5 min, within 50m'),(239,1,6,'2009-06-11','5 min, within 50m'),(239,1,10,'2009-06-11','5 min, within 50m'),(7,2,2,'2009-06-11','5 min, > 50m'),(10,1,4,'2009-06-11','5 min, > 50m'),(18,1,6,'2009-06-11','5 min, > 50m'),(64,1,2,'2009-06-11','5 min, > 50m'),(64,1,10,'2009-06-11','5 min, > 50m'),(90,1,2,'2009-06-11','5 min, > 50m'),(90,1,6,'2009-06-11','5 min, > 50m'),(90,1,7,'2009-06-11','5 min, > 50m'),(91,1,1,'2009-06-11','5 min, > 50m'),(107,1,12,'2009-06-11','5 min, > 50m'),(122,1,2,'2009-06-11','5 min, > 50m'),(123,1,10,'2009-06-11','5 min, > 50m'),(146,1,12,'2009-06-11','5 min, > 50m'),(163,1,6,'2009-06-11','5 min, > 50m'),(168,1,10,'2009-06-11','5 min, > 50m'),(183,1,7,'2009-06-11','5 min, > 50m'),(189,1,7,'2009-06-11','5 min, > 50m'),(189,1,12,'2009-06-11','5 min, > 50m'),(206,1,2,'2009-06-11','5 min, > 50m'),(7,1,3,'2009-06-11','addtnal, within 50m'),(7,1,10,'2009-06-11','addtnal, within 50m'),(37,1,8,'2009-06-11','addtnal, within 50m'),(49,2,10,'2009-06-11','addtnal, within 50m'),(57,1,4,'2009-06-11','addtnal, within 50m'),(107,1,4,'2009-06-11','addtnal, within 50m'),(111,1,8,'2009-06-11','addtnal, within 50m'),(143,1,12,'2009-06-11','addtnal, within 50m'),(239,1,9,'2009-06-11','addtnal, within 50m'),(7,1,9,'2009-06-11','addtnl 3 min, >50m'),(90,1,9,'2009-06-11','addtnl 3 min, >50m'),(100,1,10,'2009-06-11','addtnl 3 min, >50m'),(107,1,11,'2009-06-11','addtnl 3 min, >50m'),(163,1,12,'2009-06-11','addtnl 3 min, >50m'),(178,1,12,'2009-06-11','addtnl 3 min, >50m'),(189,1,11,'2009-06-11','addtnl 3 min, >50m'),(239,1,9,'2009-06-11','addtnl 3 min, >50m');
+/*!40000 ALTER TABLE `flint_hills` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `mn_birds`
 --
 
@@ -51,4 +79,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-04-04 21:15:25
+-- Dump completed on 2019-04-07 18:19:41
