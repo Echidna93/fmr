@@ -8,7 +8,7 @@ con = mdb.connect('localhost', 'root', 'edinburgh', 'fmr_bird_data');
 cur = con.cursor()
 
 mutbl_data = [
-        ('BLJA', 1, 2)
+        ('AMRE', 1, 13)
 ]
 
 
@@ -18,7 +18,7 @@ mutbl_data = [
 for i in mutbl_data:
         cur.execute("SELECT bird_id FROM mn_birds WHERE species_code LIKE %s;", [i[0]])
         bird_id = cur.fetchone() 
-        print('(' + str(bird_id[0])  + ', ' +  str(i[1]) + ', ' + str(i[2]) + ', ' + '\'2013-07-01\'' + ', ' + '\'adtnl 3 min, > 50m\'' + '),')
+        print('(' + str(bird_id[0])  + ', ' +  str(i[1]) + ', ' + str(i[2]) + ', ' + '\'2014-06-12\'' + ', ' + '\'None\'' + '),')
 
 
 
